@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/file_safety"
+            android:title="Files Safety" />
+
+    </group>
+
+    <item android:title="My account">
+        <menu>
+            <item
+                android:id="@+id/password"
+                android:icon="@drawable/profile"
+                android:title="Edit password"/>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/send_feedback"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Feedback"/>
+        </menu>
+    </item>
+
+</menu>

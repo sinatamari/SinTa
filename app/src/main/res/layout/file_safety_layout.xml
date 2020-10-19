@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Menubar -->
+        <RelativeLayout
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+            <RelativeLayout
+                android:onClick="Back_To_Home_Page"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/back_to_home_icon" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/background_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SinTa Encryptor" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="Update_List"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/update_icon"
+                    android:background="@drawable/search"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- end Menubar -->
+
+        <LinearLayout
+            android:gravity="top"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="@drawable/shadow_top"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <!-- Toolbar for choosing -->
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:onClick="onMusic_Files_Click"
+                        android:gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@drawable/music2"
+                            android:gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:onClick="onMovie_Files_Click"
+                        android:gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@drawable/movie"
+                            android:gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:onClick="onPhoto_Files_Click"
+                        android:gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@drawable/pictures"
+                            android:gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:onClick="onPdf_Files_Click"
+                        android:gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@drawable/document"
+                            android:gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:onClick="onOther_Files_Click"
+                        android:gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@drawable/threedots"
+                            android:gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="350dp"
+                    android:layout_height="2dp" >
+                    <TextView
+                        android:id="@+id/music_sub_icon"
+                        android:background="@color/gray"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/movie_sub_icon"
+                        android:background="@color/gray"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/photos_sub_icon"
+                        android:background="@color/gray"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/pdf_sub_icon"
+                        android:background="@color/gray"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/others_sub_icon"
+                        android:background="@color/gray"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+            <!-- End of Toolbar for Choosing -->
+
+            <!-- Result of files -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/locked"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:id="@+id/result_of_files_Encrypted"
+                        android:layout_width="100dp"
+                        android:text="0 Files"
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="55dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/result_of_files_Decrypted"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="0 Files"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="130dp"
+                        android:src="@drawable/lock_open"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:background="@drawable/shadow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                    <ListView
+                        android:id="@+id/List_Of_All_Files"
+                        android:fastScrollEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+
+                <!-- List for showing files to usre -->
+
+                <!-- end of List -->
+
+            </LinearLayout>
+            <!-- end of Result -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- **************** Music Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Music_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Music_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Banner"
+                        android:onClick="Close_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Music"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/song_name_textview"
+                        android:text="Love me back to life.mp3"
+                        android:gravity="center|left"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/Enable_Music_Testing"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <RelativeLayout
+                        android:id="@+id/btn_paly_music_in_banner"
+                        android:onClick="Play_Music"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:id="@+id/play_music"
+                            android:background="@drawable/play_music"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/btn_stop_music_in_banner"
+                        android:onClick="Stop_Music"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:id="@+id/stop_music"
+                            android:background="@drawable/stop_music"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/encrypt_music_button_in_dialogbox"
+                        android:onClick="Encrypt_Music"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/encrypt_music_text"
+                            android:text="Encrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/decrypt_music_button_in_dialogbox"
+                        android:onClick="Decrypt_Music"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/decrypt_music_text"
+                            android:text="Decrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Music Banner DialogBox ************ -->
+
+
+    <!-- **************** Movie Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Movie_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Movie_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Movie_Banner"
+                        android:onClick="Close_Movie_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/paly_movie_in_banner"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="41dp"
+                        android:onClick="Play_Movie"
+                        android:gravity="center"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:id="@+id/Play_Movie"
+                            android:background="@drawable/play_movie"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="81dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Video"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/show_unable_to_play_this_video"
+                            android:gravity="center|left"
+                            android:layout_margin="5dp"
+                            android:visibility="invisible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <VideoView
+                            android:id="@+id/videoView"
+                            android:visibility="visible"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/encrypt_movie_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="Encrypt_Movie"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_encrypt_video_in_banner"
+                            android:text="Encrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/decrypt_movie_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="Decrypt_Movie"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_decrypt_video_in_banner"
+                            android:text="Decrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Movie Banner DialogBox ************ -->
+
+
+    <!-- **************** Image Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Image_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Image_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Image_Banner"
+                        android:onClick="Close_Image_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Image"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:visibility="visible"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/encrypt_image_button_in_dialogbox"
+                        android:onClick="Encrypt_Image"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_encrypt_image_in_banner"
+                            android:text="Encrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/decrypt_image_button_in_dialogbox"
+                        android:onClick="Decrypt_Image"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_decrypt_image_in_banner"
+                            android:text="Decrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Image Banner DialogBox ************ -->
+
+
+    <!-- **************** PDF Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/PDF_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/PDF_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_PDF_Banner"
+                        android:onClick="Close_PDF_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/viewPDF"
+                        android:onClick="ViewPDF"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="41dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/viewpdf"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="81dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="PDF"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/pdfView"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:gravity="left|center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/encrypt_pdf_button_in_dialogbox"
+                        android:onClick="Encrypt_Pdf"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_encrypt_pdf_in_banner"
+                            android:text="Encrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/decrypt_pdf_button_in_dialogbox"
+                        android:onClick="Decrypt_Pdf"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_decrypt_pdf_in_banner"
+                            android:text="Decrypt"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of PDF Banner DialogBox ************ -->
+
+
+
+    <!-- **************** Other Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Other_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Other_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Other_Banner"
+                        android:onClick="Close_Other_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Other"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/otherView"
+                            android:scrollbars="horizontal|vertical"
+                            android:scrollHorizontally="true"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:gravity="left|center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/encrypt_other_button_in_dialogbox"
+                        android:onClick="Encrypt_Other"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Encrypt"
+                            android:id="@+id/txt_encrypt_other_in_banner"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp" />
+                    <RelativeLayout
+                        android:id="@+id/decrypt_other_button_in_dialogbox"
+                        android:onClick="Decrypt_Other"
+                        android:gravity="center"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Decrypt"
+                            android:id="@+id/txt_decrypt_other_in_banner"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Other Banner DialogBox ************ -->
+
+
+
+    <!-- **************** Search Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Search_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="Do_Nothing"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Search_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Search_Banner"
+                        android:onClick="Close_Search_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Search"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/Search_Input_Text"
+                            android:background="@android:color/background_light"
+                            android:hint="Type to Search"
+                            android:textColorHint="@color/gray"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:gravity="center|bottom"
+                            android:textCursorDrawable="@drawable/color_cursur"
+                            android:layout_width="250dp"
+                            android:layout_height="50dp" />
+                        <TextView
+                            android:background="@color/colorPrimary"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="2dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/search_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="Search_Button_Go"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Go"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Search Banner DialogBox ************ -->
+
+
+
+</android.support.constraint.ConstraintLayout>

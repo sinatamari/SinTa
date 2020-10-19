@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="80dp">
+
+    <!-- icon -->
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/item_icon"
+                android:src="@drawable/lock_open"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+                <TextView
+                    android:id="@+id/item_title"
+                    android:textColor="@color/black"
+                    android:text="Learn pentesting for android devices.pdf"
+                    android:layout_width="match_parent"
+                    android:gravity="center|left"
+                    android:textSize="17dp"
+                    android:layout_height="22dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/item_path"
+                android:textSize="10dp"
+                android:text="/storage/emulated/0/m.mp3"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="top|left"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/item_descryption"
+                    android:textColor="@color/red"
+                    android:textSize="10dp"
+                    android:textAlignment="center"
+                    android:gravity="top|left"
+                    android:text="UN-Encrypted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- title -->
+
+
+</LinearLayout>

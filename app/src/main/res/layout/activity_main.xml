@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <include
+        android:id="@+id/nav_app_bar_main"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- **************** Login Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Login_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="tes"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Login_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Login_Banner"
+                        android:onClick="Close_Login_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Login"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/Login_Input_Text"
+                            android:background="@android:color/background_light"
+                            android:hint="Password"
+                            android:textColorHint="@color/gray"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:inputType="textPassword"
+                            android:gravity="center|bottom"
+                            android:textCursorDrawable="@drawable/color_cursur"
+                            android:layout_width="250dp"
+                            android:layout_height="50dp" />
+                        <TextView
+                            android:background="@color/colorPrimary"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="2dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/login_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="Login_Button_Go"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Go"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Login Banner DialogBox ************ -->
+
+    <!-- **************** new Login Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/New_Login_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="tes"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/New_Login_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/New_Close_Login_Banner"
+                        android:onClick="Close_Login_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Create Password"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/New_Login_Input_Text"
+                            android:background="@android:color/background_light"
+                            android:hint="Password"
+                            android:textColorHint="@color/gray"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:inputType="textPassword"
+                            android:gravity="center|bottom"
+                            android:maxLength="20"
+                            android:textCursorDrawable="@drawable/color_cursur"
+                            android:layout_width="250dp"
+                            android:layout_height="30dp" />
+                        <TextView
+                            android:background="@color/colorPrimary"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp" />
+                        <EditText
+                            android:id="@+id/New_Re_Login_Input_Text"
+                            android:background="@android:color/background_light"
+                            android:hint="Re-write password"
+                            android:textColorHint="@color/gray"
+                            android:layout_margin="5dp"
+                            android:maxLength="20"
+                            android:visibility="visible"
+                            android:inputType="textPassword"
+                            android:gravity="center|bottom"
+                            android:textCursorDrawable="@drawable/color_cursur"
+                            android:layout_width="250dp"
+                            android:layout_height="30dp" />
+                        <TextView
+                            android:background="@color/colorPrimary"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="2dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/new_login_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="New_Login_Button_Go"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Go"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of new Login Banner DialogBox ************ -->
+
+
+    <!-- **************** Send Feedback Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/Feedback_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="tes"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/Feedback_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_Feedback_Banner"
+                        android:onClick="Close_Feedback_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Feedback"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:gravity="bottom|center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/Feedback_Input_Text"
+                            android:background="@android:color/background_light"
+                            android:hint="Your Feedback"
+                            android:textColorHint="@color/gray"
+                            android:layout_margin="5dp"
+                            android:visibility="visible"
+                            android:scrollbars="vertical|horizontal"
+                            android:gravity="left|bottom"
+                            android:textCursorDrawable="@drawable/color_cursur"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginBottom="3dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="2dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/feedback_button_in_dialogbox"
+                        android:gravity="center"
+                        android:onClick="Feedback_Button_Go"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Send"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Send Feedback Banner DialogBox ************ -->
+
+
+    <!-- **************** Send Feedback Banner DialogBox *******************-->
+    <LinearLayout
+        android:id="@+id/AboutUs_Banner_DialogBox_Alpha"
+        android:visibility="invisible"
+        android:onClick="tes"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/AboutUs_Banner_DialogBox_Main_Part_Parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/shadow_for_dialog_box"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="vertical"
+                android:background="@android:color/background_light"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RelativeLayout
+                        android:id="@+id/Close_AboutUs_Banner"
+                        android:onClick="Close_AboutUs_Banner"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:background="@drawable/close_dialog"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:background="@color/gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="About us"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20dp"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:gravity="bottom|left"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:enabled="true"
+                            android:editable="false"
+                            android:clickable="true"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:background="@android:color/background_light"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:nestedScrollingEnabled="true"
+                            android:saveEnabled="true"
+                            android:fadeScrollbars="true"
+                            android:text="SinTa is an information security team in Iran.\nOur aim is to provide secure applications, softwares and etc for protecting your important informations in the cyber space.\nSinTa team will publish its works in all over the world as soon as possible.\n\ncontact us with : sinta.security.team@gmail.com"
+                            android:scrollbars="vertical|horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- **************** End of Send Feedback Banner DialogBox ************ -->
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+</android.support.v4.widget.DrawerLayout>
